@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cti-confidence"
+version = "0.1.0"
+description = "Confidence, corroboration and assessment primitives for cyber threat intelligence"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Wiboonnissara Kaewlarpatsap" }]
+keywords = ["cti", "threat-intelligence", "osint", "admiralty-code", "icd-203"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://wiboonnissara.com"
+Source = "https://github.com/Deepsea1111/cti-confidence"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cti_confidence"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
